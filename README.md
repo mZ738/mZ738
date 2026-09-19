@@ -17,12 +17,17 @@ before they go upstream — that repo is the beta channel if you want to try the
 | | |
 |---|---|
 | **Currently** | SAP Basis (HANA, S/4HANA, ERP) · Prometheus · Grafana · Microsoft SQL Server · PowerShell · Python · Bash |
-| **Home lab** | Proxmox VE · Home Assistant · OPNsense · Wazuh · NetBox · Zigbee / MQTT · Frigate · AdGuard Home |
+| **Home lab** | Proxmox VE · Home Assistant · Wazuh · NetBox · Zigbee / MQTT · Frigate · firewall with IDS/IPS · filtering DNS |
 | **Also experienced with** | Kubernetes · Google Kubernetes Engine · Terraform · Google Cloud Platform · CI/CD · SRE practices · information security · vulnerability management |
 
 ### The home lab
 
-A multi-node Proxmox VE cluster with HA failover, a virtualised OPNsense routing a
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="homelab-dark.png">
+  <img alt="Home lab architecture: edge, perimeter, Proxmox platform, DMZ and internal zones, operations" src="homelab-light.png">
+</picture>
+
+A multi-node Proxmox VE cluster with HA failover, a virtualised firewall routing a
 segmented VLAN network, and Home Assistant tying the house together.
 
 Enterprise tooling, scaled down to a house:
