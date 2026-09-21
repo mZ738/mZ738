@@ -1,5 +1,10 @@
 ## Marvin Z
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="github-header-dark.png">
+  <img alt="What I do: monitoring, automation, infrastructure as code, CI/CD, virtualization, Kubernetes, cloud, networking, security, backups, smart home, open source" src="github-header-light.png" width="1200">
+</picture>
+
 Home lab enthusiast who turned the hobby into a career. I was running servers at
 home long before anyone paid me for it; today I'm a systems administrator with a
 decade of site reliability engineering and IT security behind me — and the lab is
