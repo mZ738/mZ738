@@ -17,17 +17,21 @@ I prefer open source wherever it does the job, and I try to give back rather tha
 just consume: fixes and features go upstream instead of living in a private fork,
 and I sponsor projects I rely on.
 
-I maintain the **[Proxmox VE integration for Home Assistant](https://github.com/dougiteixeira/proxmoxve)**.
-New features are developed and tested in [my fork](https://github.com/mZ738/proxmoxve-integration)
-before they go upstream — that repo is the beta channel if you want to try them early.
+### Projects
+
+| | |
+|---|---|
+| **[rtsp2unifi-protect](https://github.com/mZ738/rtsp2unifi-protect)** | Turns any RTSP stream into a virtual Onvif camera for UniFi Protect — audio, motion events from MQTT, Prometheus metrics, offline start. Written for two baby monitors Protect would not take; released with a multi-arch image |
+| **[Proxmox VE integration for Home Assistant](https://github.com/dougiteixeira/proxmoxve)** | I maintain it. New features are developed and tested in [my fork](https://github.com/mZ738/proxmoxve-integration) before they go upstream — that repo is the beta channel if you want to try them early |
+| **[aioproxmox](https://github.com/CoMPaTech/aioproxmox)** | Async Python client for the Proxmox VE API, the library underneath the integration. I contribute there; changes are worked out in [my fork](https://github.com/mZ738/aioproxmox) and go upstream |
 
 ### Skills
 
 | | |
 |---|---|
 | **Currently** | SAP Basis (HANA, S/4HANA, ERP) · Prometheus · Grafana · Microsoft SQL Server · PowerShell · Python · Bash |
-| **Home lab** | Proxmox VE · Home Assistant · Wazuh · NetBox · GitLab CI · OpenTofu · Zigbee / MQTT · Frigate · firewall with IDS/IPS · encrypted filtering DNS |
-| **Also experienced with** | Kubernetes · Google Kubernetes Engine · Terraform · Google Cloud Platform · CI/CD · SRE practices · information security · vulnerability management |
+| **Home lab** | Proxmox VE · Home Assistant · Wazuh · NetBox · GitLab CI · OpenTofu · Zigbee / MQTT · Frigate · go2rtc · Onvif / UniFi Protect · firewall with IDS/IPS · encrypted filtering DNS |
+| **Also experienced with** | Kubernetes · Google Kubernetes Engine · Terraform · Google Cloud Platform · CI/CD · SRE practices · information security · vulnerability management · Node.js |
 
 ### The home lab
 
@@ -43,7 +47,7 @@ Enterprise tooling, scaled down to a house:
 
 - **Wazuh** as a SIEM, with agents reporting from the hosts
 - **NetBox** as IPAM and inventory, feeding Prometheus service discovery automatically
-- **Elasticsearch** behind the firewall's deep packet inspection reporting
+- **One camera pipeline for everything** — go2rtc pulls each camera once; a virtual Onvif camera I wrote feeds UniFi Protect, Frigate does the detection, Home Assistant turns detections into Protect events
 - **A self-hosted secret store**, so no credentials sit in config files
 - **Self-hosted GitLab with CI on every push** — documentation, playbooks and infrastructure code for the lab live in one repository; pipelines lint, validate and secret-scan before anything merges
 - **Infrastructure as code** — the DNS cluster is managed with OpenTofu, existing state imported rather than rebuilt
