@@ -1,4 +1,4 @@
-# Marvin Z
+# Same tools, smaller blast radius
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="github-header-dark.png">
@@ -14,7 +14,7 @@ still where I try things first.
 Home Assistant in shape.
 
 Infrastructure automation, monitoring, and making things observable — at work and
-at home. Same tools, same standards, smaller blast radius.
+at home, to the same standards.
 
 I prefer open source wherever it does the job, and I try to give back rather than
 just consume: fixes and features go upstream instead of living in a private fork,
