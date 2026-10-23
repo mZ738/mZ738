@@ -26,7 +26,7 @@ and I sponsor projects I rely on.
 |---|---|
 | **[rtsp2unifi-protect](https://github.com/mZ738/rtsp2unifi-protect)** · author, released (v2.2.0, container image) | Turns any RTSP stream into a virtual Onvif camera for UniFi Protect — audio, motion events from MQTT, Prometheus metrics, offline start. Written for two baby monitors Protect would not take |
 | **[Proxmox VE integration for Home Assistant](https://github.com/dougiteixeira/proxmoxve)** · maintainer | New features are developed and tested in my fork [proxmoxve-integration](https://github.com/mZ738/proxmoxve-integration) before they go upstream — that repo is the beta channel if you want to try them early |
-| **[aioproxmox](https://github.com/CoMPaTech/aioproxmox)** · contributor | Async Python client for the Proxmox VE API, the library underneath the integration. Changes are worked out in my fork [mZ738/aioproxmox](https://github.com/mZ738/aioproxmox) and go upstream |
+| **[aioproxmox](https://github.com/CoMPaTech/aioproxmox)** · contributor | Async Python client for the Proxmox VE API, the library underneath the integration. Changes are worked out in my fork [aioproxmox](https://github.com/mZ738/aioproxmox) and go upstream |
 
 ## Skills
 
