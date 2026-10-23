@@ -21,9 +21,9 @@ and I sponsor projects I rely on.
 
 | | |
 |---|---|
-| **[rtsp2unifi-protect](https://github.com/mZ738/rtsp2unifi-protect)** | Turns any RTSP stream into a virtual Onvif camera for UniFi Protect — audio, motion events from MQTT, Prometheus metrics, offline start. Written for two baby monitors Protect would not take; released with a multi-arch image |
-| **[Proxmox VE integration for Home Assistant](https://github.com/dougiteixeira/proxmoxve)** | I maintain it. New features are developed and tested in [my fork](https://github.com/mZ738/proxmoxve-integration) before they go upstream — that repo is the beta channel if you want to try them early |
-| **[aioproxmox](https://github.com/CoMPaTech/aioproxmox)** | Async Python client for the Proxmox VE API, the library underneath the integration. I contribute there; changes are worked out in [my fork](https://github.com/mZ738/aioproxmox) and go upstream |
+| **[rtsp2unifi-protect](https://github.com/mZ738/rtsp2unifi-protect)** · author, released (v2.2.0, container image) | Turns any RTSP stream into a virtual Onvif camera for UniFi Protect — audio, motion events from MQTT, Prometheus metrics, offline start. Written for two baby monitors Protect would not take |
+| **[Proxmox VE integration for Home Assistant](https://github.com/dougiteixeira/proxmoxve)** · maintainer | New features are developed and tested in [my fork](https://github.com/mZ738/proxmoxve-integration) before they go upstream — that repo is the beta channel if you want to try them early |
+| **[aioproxmox](https://github.com/CoMPaTech/aioproxmox)** · contributor | Async Python client for the Proxmox VE API, the library underneath the integration. Changes are worked out in [my fork](https://github.com/mZ738/aioproxmox) and go upstream |
 
 ### Skills
 
@@ -45,14 +45,12 @@ segmented VLAN network, and Home Assistant tying the house together.
 
 Enterprise tooling, scaled down to a house:
 
-- **Wazuh** as a SIEM, with agents reporting from the hosts
+- **Wazuh** as a SIEM, with agents reporting from every host
 - **NetBox** as IPAM and inventory, feeding Prometheus service discovery automatically
-- **One camera pipeline for everything** — go2rtc pulls each camera once; a virtual Onvif camera I wrote feeds UniFi Protect, Frigate does the detection, Home Assistant turns detections into Protect events
-- **A self-hosted secret store**, so no credentials sit in config files
-- **Self-hosted GitLab with CI on every push** — documentation, playbooks and infrastructure code for the lab live in one repository; pipelines lint, validate and secret-scan before anything merges
-- **Infrastructure as code** — the DNS cluster is managed with OpenTofu, existing state imported rather than rebuilt
-- **Cluster HA failover** with node affinity rules, over a dedicated migration network
-- **GPUs passed through into containers** for camera object detection and local LLM inference
-- **Encrypted, redundant DNS** — DoT/DoH/DoQ with failover VIPs, so name resolution survives a node going down
+- **Self-hosted GitLab with CI on every push** — documentation, playbooks and infrastructure code live in one repository; pipelines lint, validate and secret-scan before anything merges, and the DNS cluster is managed with OpenTofu
+- **One camera pipeline for everything** — go2rtc pulls each camera once; a virtual Onvif camera I wrote feeds UniFi Protect, Frigate detects on a GPU passed through into a container, Home Assistant turns detections into Protect events
+- **Built to lose a node** — cluster HA failover with affinity rules over a dedicated migration network, encrypted redundant DNS (DoT/DoH/DoQ with failover VIPs), and a self-hosted secret store so no credentials sit in config files
 
 Most of what I publish here started as something I needed there first.
+
+Reach me on [LinkedIn](https://de.linkedin.com/in/marvinzetzsche).
