@@ -10,6 +10,9 @@ home long before anyone paid me for it; today I'm a systems administrator with a
 decade of site reliability engineering and IT security behind me — and the lab is
 still where I try things first.
 
+**Currently:** SAP Basis by day; by night keeping the Proxmox VE integration for
+Home Assistant in shape.
+
 Infrastructure automation, monitoring, and making things observable — at work and
 at home. Same tools, same standards, smaller blast radius.
 
